@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <meta name="description" content="Get to know Miami, a 2D Artist and Animator. Read about her art journey, inspirations, tools and creative process.">
+        <title>About: Miami</title>
+    </head>
+    <body>
+        <div id="sitecanvas">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logos/site_logo.png" alt="Miami">
+                    </a>
+                </div>
+                <ul id="menulist">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="blog.html">JOURNAL</a></li>
+                    <li><a href="links.html">LINKS</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <img src="assets/icons/menu_icon.png" alt="Menu" onclick="toggleMenu()">
+                </div>
+                <script>
+                    let menulist = document.getElementById("menulist");
+                    menulist.style.maxHeight = "0px";
+                    function toggleMenu() {
+                        if (menulist.style.maxHeight == "0px") {
+                            menulist.style.maxHeight = "360px";
+                        }
+                        else {
+                            menulist.style.maxHeight = "0px";
+                        }
+                    }
+                </script>
+            </nav>
+            <div class="pagecanvas">
+                <div class="pagecontent">
+                    <div class="aboutflexbox">
+                        <div class="authorimage">
+                            <img src="assets/author.jpg" alt="Miami's persona">
+                        </div>
+                        <div class="aboutsection">
+                            <h1 class="bigheader">ABOUT ME!</h1>
+                            <p class="underheader">
+                                Hello! My name is Miami/Mia and I'm a 2D Artist and Animator.
+                            </p>
+                            <p>
+                                I've been drawing digitally for 8 years and I'm looking forward to keep continuing my art journey.
+                            </p>
+                            <p>
+                                If you enjoy my content, you can drop a follow on any of my socials or check out my site :D
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h1 class="bigheader">MY ART JOURNEY</h1>
+                    <p>
+                        Like any other kid, I was drawing and painting things during art class or when it was required for a school project. Obviously, my art wasn't any special.
+                    </p>
+                    <p>
+                        Everything changed when I stumbled across videos from the art community, such as animation memes, story time, etc. I became really interested and wanted to learn how to do that as well, so I could make my own Youtube channel and become successful.
+                    </p>
+                    <p>
+                        All I had was my phone in order to make digital art and that's where it al started. Occasionally, I would draw traditional art. My notebooks in middle school are full of doodles lol.
+                    </p>
+                    <p>
+                        My art was really influenced by other artists at first, like Crystal Wish, Corina the Wolf, and at some point Qwerts, till I found my own art style. It has changed over the years, and I'm still working on it.
+                    </p>
+                    <p>
+                        It is more of a self learning journey. I didn't follow many tutorials online, but I'm proud of the growth I have and I'll keep working hard on the art I make.
+                    </p>
+                    <p>
+                        I hope one day I'll be able to inspire someone just like other artists inspired me when I was a kid &lt;3
+                    </p>
+                    <blockquote>
+                        To my younger self, thank you for not giving up. I love you and I'm proud of you.
+                    </blockquote>
+                    <hr>
+                    <h1 id="faqheader">FREQUENTLY ASKED QUESTIONS</h1>
+                    <p><u><b>WHAT TOOLS DO YOU USE?</b></u></p>
+                    <blockquote>
+                        I currently use my magical fingers filled with an obnoxious amount of magical sparkles and 10moons Graphic Tablet for drawing
+                    </blockquote>
+                    <p><u><b>WHAT PROGRAMS DO YOU USE?</b></u></p>
+                    <blockquote>
+                        <b>Drawing:</b> Clip Studio Paint and Ibis Paint on mobile.
+                        <br>
+                        <b>Editing:</b> Alight Motion.
+                    </blockquote>
+                    <p><u><b>ARE YOU SELF TAUGHT?</b></u></p>
+                    <blockquote>
+                        Yes! My art journey has mostly been self taught. I've learned through experimenting, practicing and observing other artists' work.
+                    </blockquote>
+                    <p><u><b>ARE YOU OPEN FOR COMMISSIONS?</b></u></p>
+                    <blockquote>
+                        Yes! You can check my <a href="commissions.html">Commissions Page</a> for prices, details and terms of service.
+                    </blockquote>
+                    <p><u><b>WHERE CAN I FIND YOU?</b></u></p>
+                    <blockquote>
+                        You can find all my social media accounts on my <a href="links.html">Links page</a>!
+                    </blockquote>
+                </div>
+            </div>
+            <footer>
+                <div id="footer">
+                    <p>Copyright © 2026 Miami</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
