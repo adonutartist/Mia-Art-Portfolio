@@ -215,6 +215,10 @@
                 character: 0,
                 ych: 0
             };
+            Object.values(commissionImages).flat().forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
             function changeImage(type, direction){
                 const images = commissionImages[type];
                 currentImages[type] = (currentImages[type] + direction + images.length) % images.length;
