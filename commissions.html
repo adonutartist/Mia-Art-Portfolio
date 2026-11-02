@@ -59,37 +59,58 @@
                         </a>
                     </p>
                     <hr>
-                    <h2 class="linkheaders">CHARACTER ILLUSTRATIONS</h2>
-                    <p>
-                        <b>Headshot / Icon : 30€</b>
-                    </p>
-                    <p>
-                        <b>Half Body : 40€</b>
-                    </p>
-                    <p>
-                        <b>Full Body : 50€</b>
-                    </p>
-                    <h3>Add-ons</h3>
-                    <ul>
-                        <li>Additional character: +50%</li>
-                        <li>Simple background: FREE</li>
-                        <li>Detailed background: Price depends on complexity</li>
-                    </ul>
+                    <div class="commission-item">
+                        <div class="commission-info">
+                            <h2 class="linkheaders">CHARACTER ILLUSTRATIONS</h2>
+                            <p><b>Headshot / Icon : 30€</b></p>
+                            <p><b>Half Body : 40€</b></p>
+                            <p><b>Full Body : 50€</b></p>
+                            <h3>Add-ons</h3>
+                            <ul>
+                                <li>Additional character: +50%</li>
+                                <li>Simple background: FREE</li>
+                                <li>Detailed background: Price depends on complexity</li>
+                            </ul>
+                        </div>
+                        <div class="commission-gallery">
+                            <div class="commission-image">
+                                <button type="button" onclick="changeImage('character', -1)">&#10094;</button>
+                                <img id="character-image" src="commissions/Character Illustration/character-1.png" alt="Character illustration examples">
+                                <button type="button" onclick="changeImage('character', 1)">&#10095;</button>
+                            </div>
+                            <p class="image-caption">Character illustration examples</p>
+                        </div>
+                    </div>
                     <hr>
-                    <h2 class="linkheaders">CHIBI ICON</h2>
-                    <p>
-                        <b>15€</b>
-                    </p>
-                    <hr>
-                    <h2 class="linkheaders">YCH : SMALL CREATURE</h2>
-                    <p>
-                        <b>15€</b>
-                    </p>
-                    <h3>Add-ons</h3>
-                    <ul>
-                        <li>Custom background: From 5€, depending on complexity</li>
-                        <li>Rendering: +5€</li>
-                    </ul>
+                    <div class="commission-item">
+                        <div class="commission-info">
+                            <h2 class="linkheaders">CHIBI ICON</h2>
+                            <p><b>15€</b></p>
+                        </div>
+                        <div class="commission-gallery">
+                            <img class="commission-single-image" src="commissions/Chibi/chibi.png" alt="Chibi examples">
+                            <p class="image-caption">Chibi icon examples</p>
+                        </div>
+                    </div>
+                    <div class="commission-item">
+                        <div class="commission-info">
+                            <h2 class="linkheaders">YCH : SMALL CREATURE</h2>
+                            <p><b>15€</b></p>
+                            <h3>Add-ons</h3>
+                            <ul>
+                                <li>Custom background: From 5€, depending on complexity</li>
+                                <li>Rendering: +5€</li>
+                            </ul>
+                        </div>
+                        <div class="commission-gallery">
+                            <div class="commission-image">
+                                <button type="button" onclick="changeImage('ych', -1)">&#10094;</button>
+                                <img id="ych-image" src="commissions/YCH/ych-1.png" alt="YCH examples">
+                                <button type="button" onclick="changeImage('ych', 1)">&#10095;</button>
+                            </div>
+                            <p class="image-caption">YCH small creature examples</p>
+                        </div>
+                    </div>
                     <hr>
                     <h1 class="bigheader">TERMS OF SERVICE</h1>
                     <p>
@@ -173,5 +194,34 @@
                 </div>
             </footer>
         </div>
+        <script>
+            const commissionImages = {
+                character: [
+                    "commissions/Character Illustration/character-1.png",
+                    "commissions/Character Illustration/character-2.png",
+                    "commissions/Character Illustration/character-3.png",
+                    "commissions/Character Illustration/character-4.png",
+                    "commissions/Character Illustration/character-5.png",
+                    "commissions/Character Illustration/character-6.png"
+                ],
+                ych: [
+                    "commissions/YCH/ych-1.png",
+                    "commissions/YCH/ych-2.png",
+                    "commissions/YCH/ych-3.png",
+                    "commissions/YCH/ych-4.png"
+                ]
+            };
+            const currentImages = {
+                character: 0,
+                ych: 0
+            };
+            function changeImage(type, direction){
+                const images = commissionImages[type];
+                currentImages[type] = (currentImages[type] + direction + images.length) % images.length;
+                const image = document.getElementById(type + "-image");
+                image.src = images[currentImages[type]];
+                image.alt = type + " example " + (currentImages[type] + 1);
+            }
+        </script>
     </body>
 </html>

@@ -120,15 +120,6 @@ h3{
     max-width: 100%;
 }
 
-.socialmedialist img{
-    max-height: 30px;
-    padding-right: 18px;
-}
-
-.socialmedialist{
-    padding: 7px 0px 10px 0px;
-}
-
 .underheader{
     margin: 0px 0px 18px 0px;
 }
@@ -283,11 +274,27 @@ hr{
     border-top: 1px dashed var(--soft-border);
 }
 
-.socialmedialist img{
+.socialmedialist {
+    padding: 7px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.socialmedialist a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.socialmedialist img {
+    max-height: 30px;
+    display: block;
     transition: transform 0.2s ease;
 }
 
-.socialmedialist img:hover{
+.socialmedialist img:hover {
     transform: translateY(-3px);
 }
 
@@ -368,5 +375,116 @@ hr{
     }
     .lastupdatenotice{
         text-align: center;
+    }
+    .pagecontent {
+    font-size: 15px;
+    padding: 20px 25px;
+    line-height: 1.7;
+    }
+    nav {
+    font-size: 17px;
+    }
+    .bigheader {
+    font-size: 28px;
+    }
+    .blogheader {
+        font-size: 34px;
+    }
+    .newsheader {
+        font-size: 26px;
+    }
+}
+
+.commission-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 0px;
+}
+
+.commission-info {
+    flex: 1;
+}
+
+.commission-gallery {
+    width: 45%;
+    text-align: center;
+}
+
+.commission-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.commission-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.commission-image button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    background: var(--deep-plum);
+    color: white;
+    font-size: 20px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.commission-image button:first-child {
+    left: 10px;
+}
+
+.commission-image button:last-child {
+    right: 10px;
+}
+
+.commission-image button:hover {
+    background: var(--pink-accent);
+}
+
+.commission-single-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--secondary-bg);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: var(--soft-plum);
+    margin-top: 8px;
+}
+
+@media (max-width: 880px) {
+    .commission-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .commission-gallery {
+        width: 100%;
+    }
+
+    .commission-image img {
+        height: 300px;
+    }
+
+    .commission-single-image {
+        max-height: 300px;
     }
 }
