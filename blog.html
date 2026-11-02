@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <meta name="description" content="Read my journal for personal updates, art progress, creative thoughts and more.">
+        <title>Journal: Miami</title>
+    </head>
+    <body>
+        <div id="sitecanvas">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logos/site_logo.png" alt="Miami">
+                    </a>
+                </div>
+                <ul id="menulist">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="blog.html">JOURNAL</a></li>
+                    <li><a href="commissions.html">COMMISSIONS</a></li>
+                    <li><a href="links.html">LINKS</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <img src="assets/icons/menu_icon.png" alt="Menu" onclick="toggleMenu()">
+                </div>
+                <script>
+                    let menulist = document.getElementById("menulist");
+                    menulist.style.maxHeight = "0px";
+                    function toggleMenu() {
+                        if (menulist.style.maxHeight == "0px") {
+                            menulist.style.maxHeight = "360px";
+                        }
+                        else {
+                            menulist.style.maxHeight = "0px";
+                        }
+                    }
+                </script>
+            </nav>
+            <div class="pagecanvas">
+                <div class="pagecontent">
+                    <h1 class="blogheader">JOURNAL</h1>
+                    <p>
+                        Welcome to my little journal!
+                        This is where I'll share updates about my art, this wesbite, creative projects,
+                        personal thoughts and whatever else I feel like writing about.
+                    </p>
+                    <hr>
+                    <div class="blogpostnotice">
+                        No entries yet!
+                    </div>
+                    <p>
+                        I'm still getting things ready around here.
+                        Check back later for new posts :D
+                    </p>
+                    <div class="blogcushion"></div>
+                </div>
+            </div>
+            <footer>
+                <div id="footer">
+                    <p>Copyright © 2026 Miami</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

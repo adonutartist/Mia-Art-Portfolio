@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <title>Links: Miami</title>
+    </head>
+    <body>
+        <div id="sitecanvas">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logos/site_logo.png" alt="Miami">
+                    </a>
+                </div>
+                <ul id="menulist">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="blog.html">JOURNAL</a></li>
+                    <li><a href="commissions.html">COMMISSIONS</a></li>
+                    <li><a href="links.html">LINKS</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <img src="assets/icons/menu_icon.png" alt="Menu" onclick="toggleMenu()">
+                </div>
+                <script>
+                    let menulist = document.getElementById("menulist");
+                    menulist.style.maxHeight = "0px";
+                    function toggleMenu() {
+                        if (menulist.style.maxHeight == "0px") {
+                            menulist.style.maxHeight = "360px";
+                        }
+                        else {
+                            menulist.style.maxHeight = "0px";
+                        }
+                    }
+                </script>
+            </nav>
+            <div class="pagecanvas">
+                <div class="pagecontent">
+                    <h1 class="bigheader">FIND ME AROUND ON THE INTERNET!</h1>
+                    <p>
+                        Want to see more of my art or keep up with what I'm doing?
+                        Here are all the places you can find me!
+                    </p>
+                    <hr>
+                    <h2 class="linkheaders">SOCIAL MEDIA ✦</h2>
+                    <ul>
+                        <li>
+                            <a href="https://bsky.app/profile/miamiartz.bsky.social" target="_blank">
+                                <b>Bluesky</b>
+                            </a>
+                            : Follow me for updates and art!
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/miami._.artz" target="_blank">
+                                <b>Instagram</b>
+                            </a>
+                            : My art and other posts.
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@miamiartz" target="_blank">
+                                <b>Youtube</b>
+                            </a>
+                            : Videos and animations.
+                        </li>
+                        <li>
+                            <a href="https://cara.app/miamiartz" target="_blank">
+                                <b>Cara</b>
+                            </a>
+                            : Find my artworks.
+                        </li>
+                        <li>
+                            <a href="https://discordapp.com/users/640137343520604190" target="_blank">
+                                <b>Discord</b>
+                            </a>
+                            : Find me on Discord
+                        </li>
+                    </ul>
+                    <hr>
+                    <h2 class="linkheaders">SUPPORT & SHOPS ♡</h2>
+                    <ul>
+                        <li>
+                            <a href="https://ko-fi.com/miami24" target="_blank">
+                                <b>Ko-fi</b>
+                            </a>
+                            : Support my work!
+                        </li>
+                        <li>
+                            <a href="https://vgen.co/miamiartz" target="_blank">
+                                <b>VGen</b>
+                            </a>
+                            : Commission artwork from me.
+                        </li>
+                        <li>
+                            <a href="https://www.redbubble.com/fr/people/Miamiartz/shop" target="_blank">
+                                <b>Redbubble</b>
+                            </a>
+                            : Check out my merch, including my Hornet sticker!
+                        </li>
+                    </ul>
+                    <hr>
+                    <h2 class="linkheaders">GUESTBOOK ✎</h2>
+                    <p>
+                        Have something to say? I'd love to hear from you :3
+                        Leave a little message in my guestbook.
+                    </p>
+
+                    <p>
+                        <b>Guestbook coming soon!</b>
+                    </p>
+                    <hr>
+                    <h2 class="linkheaders">THANKS FOR VISITING! ♡</h2>
+                    <p>
+                        Thanks for checking out my little corner of the internet.
+                        I hope you enjoy your staf :]
+                    </p>
+                    <div class="blogcushion"></div>
+                </div>
+            </div>
+            <footer>
+                <div id="footer">
+                    <p>Copyright © 2026 Miami</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
