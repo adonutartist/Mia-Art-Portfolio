@@ -51,14 +51,89 @@
                         personal thoughts and whatever else I feel like writing about.
                     </p>
                     <hr>
-                    <div class="blogpostnotice">
-                        No entries yet!
+                    <div id="journal-list" class="journal-list">
+                        <p id="journal-loading">Loading Journals...</p>
                     </div>
-                    <p>
-                        I'm still getting things ready around here.
-                        Check back later for new posts :D
-                    </p>
                     <div class="blogcushion"></div>
+                    <script>
+                        const journalFiles = [
+                            "blogposts/first-entry.html",
+                            "blogposts/second-entry.html"
+                        ];
+                        async function loadJournals() {
+                            const journalList = document.getElementById("journal-list");
+                            const journals = [];
+                            for (const file of journalFiles) {
+                                try {
+                                    const response = await fetch(file);
+                                    if (!response.ok) {
+                                        throw new Error("Could not load " + file);
+                                    }
+                                    const html = await response.text();
+                                    const doc = new DOMParser().parseFromString(html, "text/html");
+                                    const title = doc.querySelector('meta[name="journal-title"]')?.content;
+                                    const date = doc.querySelector('meta[name="journal-date"]')?.content;
+                                    const preview = doc.querySelector('meta[name="journal-preview"]')?.content;
+                                    const cover = doc.querySelector('meta[name="journal-cover"]')?.content;
+                                    if (!title || !date || !preview) {
+                                        console.warn("Missing journal information:", file);
+                                        continue;
+                                    }
+                                    journals.push({ title, date, preview, cover, url: file});
+                                } catch (error) {
+                                    console.error(error);
+                                }
+                            }
+                            journals.sort((a, b) => new Date(b.date) - new Date(a.date));
+                            journalList.innerHTML = "";
+                            if (journals.length === 0) {
+                                journalList.innerHTML = `
+                                    <div class="blogpostnotice">No entries yet!</div>
+                                    <p>I'm still getting things ready around here.
+                                    Check back later for new posts :D</p>
+                                `;
+                                return;
+                            }
+                            journals.forEach(journal => {
+                                const entry = document.createElement("article");
+                                entry.className = "journal-card";
+                                const link = document.createElement("a");
+                                link.href = journal.url;
+                                link.className = "journal-link";
+                                const content = document.createElement("div");
+                                content.className = "journal-preview";
+                                const heading = document.createElement("h2");
+                                heading.textContent = journal.title;
+                                const dateElement = document.createElement("p");
+                                dateElement.className = "journal-date";
+                                dateElement.textContent = new Date(journal.date + "T00:00:00")
+                                    .toLocaleDateString("en-GB", {
+                                        day: "numeric",
+                                        month: "long",
+                                        year: "numeric"
+                                    });
+                                const description = document.createElement("p");
+                                description.className = "journal-description";
+                                description.textContent = journal.preview;
+                                const readMore = document.createElement("span");
+                                readMore.className = "journal-readmore";
+                                readMore.textContent = "READ JOURNAL →";
+                                content.append(heading, dateElement, description, readMore);
+                                link.appendChild(content);
+                                if (journal.cover) {
+                                    const image = document.createElement("img");
+                                    image.src = journal.cover;
+                                    image.alt = "";
+                                    image.className = "journal-cover";
+
+                                    link.appendChild(image);
+                                }
+                                entry.appendChild(link);
+                                journalList.appendChild(entry);
+                            });
+                        }
+                        loadJournals();
+                    </script>
                 </div>
             </div>
             <footer>

@@ -488,3 +488,127 @@ hr{
         max-height: 300px;
     }
 }
+
+.journal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.journal-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--soft-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px #674B7020;
+}
+
+.journal-link {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    gap: 0;
+    min-height: 190px;
+    padding: 0;
+    color: var(--dark-plum);
+    text-decoration: none;
+}
+
+.journal-preview {
+    flex: 1;
+    min-width: 0;
+    padding: 22px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.journal-preview h2 {
+    color: var(--deep-plum);
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.journal-cover {
+    width: 34%;
+    max-width: 280px;
+    min-width: 220px;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+}
+
+
+.journal-date {
+    color: var(--soft-plum);
+    font-size: 13px;
+    margin: 0 0 12px;
+}
+
+.journal-description {
+    margin: 0 0 14px;
+    line-height: 1.6;
+}
+
+.journal-readmore {
+    color: var(--deep-plum);
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.journal-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.journal-post-header {
+    margin-bottom: 20px;
+}
+
+.journal-post-header .blogheader {
+    line-height: 1.3;
+}
+
+.journal-content-image {
+    display: block;
+    max-width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    margin: 25px auto;
+    border-radius: 6px;
+}
+
+.journal-post h2 {
+    color: var(--deep-plum);
+    margin-top: 30px;
+}
+
+@media (max-width: 880px) {
+    .journal-link {
+    flex-direction: column;
+    }
+
+    .journal-preview {
+        padding: 20px;
+    }
+
+    .journal-preview h2 {
+        font-size: 21px;
+    }
+
+    .journal-cover {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        height: 200px;
+    }
+}
