@@ -12,6 +12,7 @@ An art portfolio website showcasing Miami's artwork, creative projects, and comm
 - **Links:** Social media, other platforms, and guestbook.
 - **Compatibility:** Can run on both mobile and PC, has a set of css code that makes it viewable on mobile without any orientation disperancies.
 - **Guestbook:** Made using atabook u can leave messages anonymously for miami to read later or rpely back, also has auto moderation to ban any slangs and bad words :D
+- **Image slider:** Made a image sliding thing on comms page for more interactive viewing :p
 
 ## Languages & Tools Used
 
@@ -79,3 +80,9 @@ https://miamiartz.vercel.app/index.html
 
 **Developer:** Nemo  
 **Portfolio Owner:** Miami
+
+---
+
+<div align="center">
+<img width="300" alt="nemo" src="https://github.com/user-attachments/assets/07afdbb5-4254-42f4-82ae-558077fdc3c6" />
+</div>
