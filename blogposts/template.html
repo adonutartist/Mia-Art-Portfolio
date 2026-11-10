@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- JOURNAL METADATA: Used by blog.html to generate the preview -->
+
+    <!-- Write your journal title here -->
+    <meta name="journal-title" content="TITLE HERE">
+
+    <!-- Write the publication date here (YYYY-MM-DD format) -->
+    <meta name="journal-date" content="2026-11-10">
+
+    <!-- Write a short description for the journal preview here -->
+    <meta name="journal-preview" content="SHORT DESCRIPTION HERE">
+
+    <!-- Add the path to your preview/cover image here.
+         Leave the content empty if you don't want a cover image. -->
+    <meta name="journal-cover" content="../assets/journal/placeholder image.webp">
+
+    <!-- Change the browser tab title here -->
+    <title>TITLE HERE | Miami</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+</head>
+
+<body>
+
+<div id="sitecanvas">
+
+    <!-- NAVIGATION: Keep this unchanged -->
+
+    <nav>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/logos/site_logo.png" alt="Miami">
+            </a>
+        </div>
+
+        <ul id="menulist">
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../gallery.html">GALLERY</a></li>
+            <li><a href="../blog.html">JOURNAL</a></li>
+            <li><a href="../commissions.html">COMMISSIONS</a></li>
+            <li><a href="../links.html">LINKS</a></li>
+        </ul>
+
+        <div class="menu-icon">
+            <img src="../assets/icons/menu_icon.png"
+                 alt="Menu" onclick="toggleMenu()">
+        </div>
+
+        <script>
+            let menulist = document.getElementById("menulist");
+            menulist.style.maxHeight = "0px";
+
+            function toggleMenu() {
+                if (menulist.style.maxHeight == "0px") {
+                    menulist.style.maxHeight = "360px";
+                } else {
+                    menulist.style.maxHeight = "0px";
+                }
+            }
+        </script>
+    </nav>
+
+
+    <!-- JOURNAL CONTENT -->
+
+    <div class="pagecanvas">
+
+        <main class="pagecontent journal-post">
+
+            <!-- Link back to the main journal page -->
+            <a class="journal-back" href="../blog.html">
+                ← Back to Journal
+            </a>
+
+
+            <!-- JOURNAL HEADING -->
+
+            <header class="journal-post-header">
+
+                <!-- Write your journal title here -->
+                <h1 class="blogheader">TITLE HERE</h1>
+
+                <!-- Write your publication date here -->
+                <p class="journal-date">10 November 2026</p>
+
+                <!-- Optional: Add a subtitle here -->
+                <!-- <p>YOUR SUBTITLE HERE</p> -->
+
+            </header>
+            <hr>
+
+
+            <!-- SECTION 1: Introduction -->
+
+            <h2>SECTION HEADING HERE</h2>
+            <p>
+                WRITE YOUR INTRODUCTION HERE.
+                You can write multiple sentences and paragraphs.
+            </p>
+
+            <p>
+                WRITE ANOTHER PARAGRAPH HERE.
+            </p>
+            <!-- SECTION 2: Add another heading and text -->
+            <h2>ANOTHER HEADING HERE</h2>
+            <p>
+                WRITE ABOUT WHATEVER YOU WANT HERE.
+            </p>
+            <!-- IMAGE: Replace the image path with your own.
+                 Images inside blogposts/ should use ../ before the path. -->
+            <img
+                src="../assets/journal/IMAGE-NAME.png"
+                alt="DESCRIPTION OF YOUR IMAGE"
+                class="journal-content-image"
+            >
+
+            <!-- Optional image caption -->
+            <p class="metanotes">
+                WRITE IMAGE CAPTION HERE
+            </p>
+
+
+            <!-- SECTION 3: More text -->
+
+            <h2>ANOTHER SECTION HEADING</h2>
+
+            <p>
+                CONTINUE WRITING YOUR JOURNAL HERE.
+            </p>
+            <!-- OPTIONAL: Add a link -->
+            <p>
+                Check this out:
+                <a href="https://example.com" target="_blank"
+                   rel="noopener noreferrer">
+                    LINK TEXT HERE
+                </a>
+            </p>
+            <!-- OPTIONAL: Add a quote -->
+            <blockquote>
+                WRITE YOUR QUOTE HERE.
+            </blockquote>
+            <hr>
+            <!-- Link back to the main journal page -->
+            <a class="journal-back" href="../blog.html">
+                ← Back to Journal
+            </a>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER: Keep this unchanged -->
+
+    <footer>
+        <div id="footer">
+            <p>Copyright © 2026 Miami</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
